@@ -1,0 +1,137 @@
+package net.atgame.lecture.board;
+
+import java.io.IOException;
+
+import javax.swing.plaf.synth.SynthSpinnerUI;
+
+public class BoardExcuter {
+
+	public static void main(String[] args) throws IOException {
+		// 1. Board 생성
+		final int iContentLength = 20;
+		char[][] board = new char[10][iContentLength];
+		int iCurrentIndex = 0;
+		int iSearchIndex = -1;
+		char[] aryUserInput = new char[10];
+		char tempUserInput;
+		boolean isSame = true;
+		int iCount = 0;
+		
+		// 2. 인사말 출력
+		System.out.println('안');
+		System.out.println('녕');
+		System.out.println('하');
+		System.out.println('세');
+		System.out.println('요');
+		System.out.println('\r');
+		System.out.println('\n');
+		
+		while (true)
+		{
+			// 3. 메뉴 출력
+			System.out.println('메');
+			System.out.println('뉴');
+			System.out.println('\r');
+			System.out.println('\n');
+			System.out.println('R');
+			System.out.println(':');
+			System.out.println('등');
+			System.out.println('록');
+			System.out.println('\r');
+			System.out.println('\n');
+			System.out.println('L');
+			System.out.println(':');
+			System.out.println('검');
+			System.out.println('색');
+			System.out.println('\r');
+			System.out.println('\n');
+			System.out.println('E');
+			System.out.println(':');
+			System.out.println('수');
+			System.out.println('정');
+			System.out.println('\r');
+			System.out.println('\n');
+			System.out.println('D');
+			System.out.println(':');
+			System.out.println('삭');
+			System.out.println('제');
+			System.out.println('\r');
+			System.out.println('\n');
+			System.out.println('Q');
+			System.out.println(':');
+			System.out.println('종');
+			System.out.println('료');
+			System.out.println('\r');
+			System.out.println('\n');
+			System.out.println('선');
+			System.out.println('택');
+			System.out.println(':');
+			
+			// 4. 사용자 선택
+			char cUserInput = (char) System.in.read();
+			System.in.read();
+			System.in.read();
+			
+			// 5. 메뉴 분기
+			switch (cUserInput)
+			{
+				case 'R' :
+					System.out.println('등');
+					System.out.println('록');
+					System.out.println('\r');
+					System.out.println('\n');
+					System.out.println('내');
+					System.out.println('용');
+					System.out.println(':');
+					
+					for (int i = 0; i < iContentLength; i++)
+					{
+						tempUserInput = (char) System.in.read();
+						if ( '\r' == tempUserInput )
+						{
+							System.in.read();
+							board[iCurrentIndex][i] = '\0';
+							break;
+						}
+						board[iCurrentIndex][i] = tempUserInput;
+					}
+					
+					iCurrentIndex++;
+					
+					System.out.println('등');
+					System.out.println('록');
+					System.out.println('되');
+					System.out.println('었');
+					System.out.println('습');
+					System.out.println('니');
+					System.out.println('다');
+					System.out.println('.');
+					System.out.println('\r');
+					System.out.println('\n');
+					
+					break;
+				case 'L' :
+					System.out.println('목');
+					System.out.println('록');
+					System.out.println('\r');
+					System.out.println('\n');
+
+					for (int i = 0; i < iCurrentIndex; i++)
+					{
+						isSame = true;
+						for (int j = 0; j < iContentLength; j++)
+						{
+							if ( '\0' == board[i][j] )
+							{
+								break;
+							}
+							System.out.println(board[i][j]);
+						}
+						System.out.println('\r');
+						System.out.println('\n');
+					}
+					break;
+			}
+		}
+	}
+}
