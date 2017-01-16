@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BoardExcuter.java&apos; to &apos;02_Board_Function/src/net.atgame.lecture.board&apos;&#x0D;&#x0A;- Original project: &apos;01_Board_Main&apos;&#x0D;&#x0A;- Destination element: &apos;02_Board_Function/src/net.atgame.lecture.board&apos;&#x0D;&#x0A;- Original element: &apos;net.atgame.lecture.board.BoardExcuter.java&apos;" description="Copy compilation unit" destination="=02_Board_Function/src&lt;net.atgame.lecture.board" element1="/src&lt;net.atgame.lecture.board{BoardExcuter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1484572693952" units="1" version="1.0"/>
+</session>
